@@ -1,0 +1,24 @@
+# Version: 4 (final version) got the while loop working without the condition I set in Version: 3 above. The while loop is working and so
+# now it is time to make this the final version. I removed print(s) statement
+
+def isHappy(n):
+    input_list=list(str(n))
+    answer=[]
+    while input_list:
+        s=0
+        for i in range(len(input_list)):
+            s+=int(input_list[i])**2
+        
+        print(s)
+            
+        if s ==1:
+            return True
+    
+        elif s in answer:
+            return False
+        
+        else:
+            answer.append(s)
+            input_list=list(str(s))
+    
+       
